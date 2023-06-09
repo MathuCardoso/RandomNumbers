@@ -22,11 +22,11 @@
 
             <div class="inp">
                 <label for="max">Máximo:</label>
-                <input type="number" id="max">
+                <input type="number" id="max" maxlength="5">
             </div>
         </div>
         <div class="btn">
-            <button>Gerar</button>
+            <button>Gerar Número</button>
         </div>
         <div class="result">
             <span id="random">0</span>
@@ -42,18 +42,25 @@
             const min = parseInt(document.querySelector('#min').value);
             const max = parseInt(document.querySelector('#max').value);
 
-            if (isNaN(min) || isNaN(max)) {
+            if (isNaN(min) && isNaN(max)) {
                 result = Math.floor(Math.random() * 999) + 1;
                 document.querySelector('#random').innerHTML = result;
             } 
+            
+            else if (isNaN(min) || isNaN(max)) {
+                alert('Os dois campos precisam estar preenchidos.');
+            } 
+            
             else if (min >= max) {
                 alert('O número mínimo deve ser menor que o número máximo.');
             } 
+            
             else {
                 let result = Math.floor(Math.random() * (max - min + 1)) + min;
                 document.querySelector('#random').innerHTML = result;
             }
         }
+
     </script>
 
 </body>

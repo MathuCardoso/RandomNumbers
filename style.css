@@ -50,7 +50,7 @@ button::selection{
 .inp{
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 input::-webkit-outer-spin-button,
@@ -73,9 +73,9 @@ input::-webkit-inner-spin-button {
 }
 
 .btn button{
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 7px;
-    width: 100px;
+    width: auto;
     border: none;
     background: none;
     color: white;
@@ -91,7 +91,11 @@ input::-webkit-inner-spin-button {
 
 .result{
     margin: 10px 0;
-    font-size: 35px;
+    font-size: 50px;
     text-align: center;
     letter-spacing: 2px;
+}
+
+.result span{
+    border-bottom: 2px solid purple;
 }
